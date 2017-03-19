@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title> INFO 3180 Lab 6 </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css"> 
+    </head>
+    
+    <body>
+        
+        <script>
+        var app = angular.module("myShoppingList", []); 
+        app.controller("myCtrl", function($scope) {
+            $scope.products = ["Milk", "Bread", "Cheese"];
+        });
+        </script>
+        
+        <div ng-app="myShoppingList" ng-controller="myCtrl">
+            <ul>
+                <li ng-repeat="x in products">{{x}}</li>
+            </ul>
+        </div>
+    </body>
+    
+</html>
